@@ -24,30 +24,30 @@ II. Description of script
 
 The script has good comments along the way, but here is a description of what happens.
 
-(1) load in the libraries
-(2) read the training data and test data into objects
-(3) read the row headers from features.txt
-(4) Use grep to find the indices of just those variables which are a mean or a standard deviation
-(5) Using the transpose function, arrange the features as one long horizontal data frame.  This will facilitate the use of 'select' to pull out just the ones that are needed.  There are other ways to do this.    Note: the lectures and swirl modules talk about the chain operator. (%>%)  It lets you avoid restating your context over and over.  I considered it slightly helpful to be forced to restate my context over and over, therefore I did not use chain/pipeline.
-(6) Now that this one-row set of 'mean' and 'standard deviation' variables is available, use it as the basis for a select from the data as a whole - one from test and one from train.  The reason for subsetting first and concatenating these sets afterwards with rbind() is because of the slight possibility that there would be a performance hit from the rbind operation.  Since there is no point in waiting for rbind() to work on data which is only going to be thrown out afterwards, I select from the two pieces first and concatenate them afterwards.
-(7) Read in the subject and activity data from the appropriate text files.  This data is also still stored as 'test' and 'train'.
-(8) The fact of whether a given datapoint is from 'test' or 'train' is preserved solely in the filename.  When the sets are combined, this bit of information will be lost.   It may not matter, but just in case, I create a character variable in the separate test and train sets called 'experiment_step', which preserves the source of origin.  It is a way of fully qualifying.
+(1) load in the libraries<BR>
+(2) read the training data and test data into objects<BR>
+(3) read the row headers from features.txt<BR>
+(4) Use grep to find the indices of just those variables which are a mean or a standard deviation<BR>
+(5) Using the transpose function, arrange the features as one long horizontal data frame.  This will facilitate the use of 'select' to pull out just the ones that are needed.  There are other ways to do this.    Note: the lectures and swirl modules talk about the chain operator. (%>%)  It lets you avoid restating your context over and over.  I considered it slightly helpful to be forced to restate my context over and over, therefore I did not use chain/pipeline.<BR>
+(6) Now that this one-row set of 'mean' and 'standard deviation' variables is available, use it as the basis for a select from the data as a whole - one from test and one from train.  The reason for subsetting first and concatenating these sets afterwards with rbind() is because of the slight possibility that there would be a performance hit from the rbind operation.  Since there is no point in waiting for rbind() to work on data which is only going to be thrown out afterwards, I select from the two pieces first and concatenate them afterwards.<BR>
+(7) Read in the subject and activity data from the appropriate text files.  This data is also still stored as 'test' and 'train'.<BR>
+(8) The fact of whether a given datapoint is from 'test' or 'train' is preserved solely in the filename.  When the sets are combined, this bit of information will be lost.   It may not matter, but just in case, I create a character variable in the separate test and train sets called 'experiment_step', which preserves the source of origin.  It is a way of fully qualifying.<BR>
 
-(9) rbind() the subjects and rbind() the activities.
+(9) rbind() the subjects and rbind() the activities.<BR>
 
-(10) Overwrite the generic names with explanatory name strings using names()
+(10) Overwrite the generic names with explanatory name strings using names()<BR>
 
-(11) cbind() the subjects and activities together
+(11) cbind() the subjects and activities together<BR>
 
-(12) Use merge() to bring in the activity names, joining on the activity ID.
+(12) Use merge() to bring in the activity names, joining on the activity ID.<BR>
 
-(13) After a couple more nominal cleanups, do the major cbind between the large data set and the subjects-and-activities row headers.
+(13) After a couple more nominal cleanups, do the major cbind between the large data set and the subjects-and-activities row headers.<BR>
 
-(14) Write.csv of the filename "tidy_data.csv"
+(14) Write.csv of the filename "tidy_data.csv"<BR>
 
-(15) Using aggregate(), create a new data frame that contains one average per variable, for each subject-activity pair.
+(15) Using aggregate(), create a new data frame that contains one average per variable, for each subject-activity pair.<BR>
 
-(16) Write.csv of the filename "tidy_data_averages.csv"
+(16) Write.csv of the filename "tidy_data_averages.csv"<BR>
 
 (17) For the assignment itself, write.table of the averages file (in txt format and with row.names=FALSE) in order to be able to upload.
 
