@@ -87,7 +87,9 @@ averages <- aggregate(data_test_and_train_with_row_information,by=list(data_test
 averages <- select(averages,1:2,6:71)
 averages <- rename(averages, subject_id = Group.1)
 averages <- rename(averages, activity_name = Group.2)
-write.csv(averages,file="tidy_data_averages.csv",row.names=FALSE)
- 
+
+write.table(averages,file="tidy_data_averages.txt",row.names=FALSE)
+
+# could also write out the second set in csv format here 
 }
 
