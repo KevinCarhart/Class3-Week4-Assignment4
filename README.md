@@ -7,11 +7,11 @@ This readme "explains how all of the scripts work and how they are connected."  
 
 I. General Overview 
 
-In this folder you should find the following files:
-README.md
-codebook.md
-run_analysis.R
-
+In this folder you should find the following files:<BR>
+README.md<BR>
+codebook.md<B>
+run_analysis.R<BR>
+<BR>
 There is only one R file.  The assumptions on how to use it are as follows:
 
 (1) Your working directory should be "UCI HAR Dataset".  The script will not set this for you, which means that you may unzip the UCI data anywhere you want.  But please setwd() to "UCI HAR Dataset" before running, and this way the script will be able to find everything within the test and train folders.<BR>
