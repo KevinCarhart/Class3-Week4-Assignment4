@@ -14,7 +14,7 @@ run_analysis.R
 
 There is only one R file.  The assumptions on how to use it are as follows:
 
-(1) Your working directory should be "UCI HAR Dataset".  The script will not set this for you, which means that you may unzip the UCI data anywhere you want.  But please setwd() to "UCI HAR Dataset" before running, and this way the script will be able to find everything within the test and train folders.
+(1) Your working directory should be "UCI HAR Dataset".  The script will not set this for you, which means that you may unzip the UCI data anywhere you want.  But please setwd() to "UCI HAR Dataset" before running, and this way the script will be able to find everything within the test and train folders.<BR>
 (2) The script assumes the "dplyr" and "tidyr" libraries.  However, if you do not load these libraries before running run_analysis.R, the script will load them for you.
 
 Given these two assumptions, it is a one-step process to run the script.  From the R prompt, execute run_analysis()
