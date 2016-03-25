@@ -49,5 +49,6 @@ The script has good comments along the way, but here is a description of what ha
 
 (16) Write.csv of the filename "tidy_data_averages.csv"
 
+(17) For the assignment itself, write.table of the averages file (in txt format and with row.names=FALSE) in order to be able to upload.
 
 
