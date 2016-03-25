@@ -51,4 +51,4 @@ The script has good comments along the way, but here is a description of what ha
 
 (17) For the assignment itself, write.table of the averages file (in txt format and with row.names=FALSE) in order to be able to upload.
 
-
+(18) In case you need tidy_data.txt, write.table of the filename tidy_data.txt.
