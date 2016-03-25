@@ -9,7 +9,7 @@ I. General Overview
 
 In this folder you should find the following files:<BR>
 README.md<BR>
-codebook.md<B>
+codebook.md<BR>
 run_analysis.R<BR>
 <BR>
 There is only one R file.  The assumptions on how to use it are as follows:
